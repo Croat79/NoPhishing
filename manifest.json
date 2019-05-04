@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "No Phishing",
+  "description": "An extension that helps in preventing phishing attacks via Gmail",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mail.google.com/*"
+      ],
+      "js": ["main.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
